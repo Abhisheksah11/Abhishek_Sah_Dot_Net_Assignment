@@ -1,0 +1,113 @@
+﻿@{
+    ViewData["Title"] = "Employee Management System";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+
+            .btn:hover {
+                background-color: #0056b3;
+            }
+
+        .btn-secondary {
+            background-color: #28a745;
+        }
+
+            .btn-secondary:hover {
+                background-color: #218838;
+            }
+
+        .card {
+            display: inline-block;
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="text-center">
+            <h1>Secure Employee Management System</h1>
+            <p>Our Employee Management System is built with the highest standards of security to ensure that sensitive employee data remains safe. The system provides secure access controls, encryption, and detailed user activity tracking to maintain the integrity of your data and prevent unauthorized access.</p>
+
+            <div class="card">
+                <h2 class="card-title">Request for Employee</h2>
+                <p class="card-text">Click the button to request a new employee. This action is secure and requires proper authorization.</p>
+                <button class="btn" onclick="location.href='@Url.Action("Create", "Employees")'">Request Employee</button>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Check for Confirmation</h2>
+                <p class="card-text">Click the button to check for employee confirmation status. Only authorized users can access this information securely.</p>
+                <button class="btn btn-secondary" onclick="location.href='@Url.Action("Index", "RequestJobs")'">Check Confirmation</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
